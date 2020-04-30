@@ -21,6 +21,9 @@
         let item = `<li>${input}<input type="checkbox"><input type="radio"></li>`
         $('#todo-list').append(item)
       });
+      $(':checkbox').click(function () {
+        $(this).closest('li').toggleClass('stricken')
+      });
     });
     </script>
     <style>
@@ -31,6 +34,10 @@
 
     #description, #search, #todo-list {
       font-size: 1.5em;
+    }
+
+    .stricken {
+      text-decoration: line-through;
     }
     </style>
   </head>
