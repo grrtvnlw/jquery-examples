@@ -10,8 +10,22 @@
     When the save button is clicked, take the text value inside the text field, and append a new <li> element to the #log with the entered text value.
     HINT: lookup .val()
     */
-    $(function () {
+    // $(document).ready(function () {
+    //   $('#the-button').click(function () {
+    //     $('#the-message').html('You clicked me!');
+    //     $('#the-button').html('Click again?');
+    //   });
+    // });
+    $(document).ready(function () {
       // write your code here
+      $('#clear-button').click(function () {
+        console.log("hello!")
+        // $(this).parent('input').find('#text-field').empty();
+      });
+      $('#save-button').click(function () {
+        let input = ($('#text-field').val())
+        $('#log').append(`<li>${input}</li>`);
+      });
     });
     </script>
   </head>
