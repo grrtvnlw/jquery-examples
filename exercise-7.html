@@ -18,7 +18,8 @@
     $(document).ready(function () {
       $('#add-button').click(function () {
         let input = ($('#description').val())
-        $('#todo-list').append(`<li>${input}</li>`);
+        let item = `<li>${input}<input type="checkbox"><input type="radio"></li>`
+        $('#todo-list').append(item)
       });
     });
     </script>
@@ -38,7 +39,7 @@
       <input id="description" type="text" name="description">
       <button id="add-button">Add Task</button>
       <ul id="todo-list">
-        <li>Feed the cat</li>
+        <li>Feed the cat<input type="checkbox"><input type="radio"></li>
       </ul>
     </div>
   </body>
